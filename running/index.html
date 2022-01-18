@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href=https://cdn.glitch.com/fdc007d7-65a5-470c-9acf-675db01e3ce9%2Ffavicon.ico?v=1632380750532>
+    <title>Sayama RC</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+       <p>狭山RC</p>
+    </header>
+    <div class="glovalNavigation">
+      <a href="#" class="btn-green" onclick="onclickButton_SendOfferSDP()">ペース換算</a>
+    </div>
+    <pace>
+	走った距離とタイムを入力すると、1kmあたりのペースを求めることができます<br>
+	<div class="dis">
+	  <label for="name">走行距離 : </label>
+	  <input type="number" id="distance" name="distance" min=0 max=42195 step=100>
+	  <label for="name">[m] </label>
+	</div>
+	<div class="time">
+	  <label for="name">タイム : </label>
+	  <input type="number" id="min" name="min" min=0 max=59>
+	  <label for="name">[分] </label>
+	  <input type="number" id="sec" name="sec" min=0 max=59>
+	  <label for="name">[秒] </label>
+	</div>
+	<div class="operate">
+	  <input type="button" id="calc" name="calc" value="計算" onclick="onclickButton_calc()">    
+	  <input type="button" id="clear" name="clear" value="クリア" onclick="onclickButton_clear()">
+	</div>
+	<div class="result">
+	  <p><span id="pace_min">0</span>分<span id="pace_sec">0</span>秒/km</p>
+	</div>
+    </pace>
+    <footer class="footer">
+        <p></p>
+    </footer>
+
+  <!-- Script -->
+    <script src="client.js"></script>
+</body>
+</html>

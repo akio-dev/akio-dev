@@ -1,0 +1,127 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {  /* 要素型セレクタ:要素名で指定した要素 */
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+/*
+  複数のセレクタを指定
+  「*」全称セレクタ:すべての要素
+  「:before」擬似要素:要素の直前
+  「:after」擬似要素:要素の直後
+*/
+  box-sizing: inherit;                /* 「inherit」を指定すると強制的に値を継承する */
+}
+
+/* adjust typography defaults */
+body{  /* 要素型セレクタ:要素名で指定した要素 */
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+.header{
+/*
+  「.」の前に要素名が無いので、要素を特定しないclassセレクタ
+*/
+    height: 50px;
+    text-align: center;
+    background-color: #2e2;
+    font-weight: bold;
+    font-size:16px;
+    text-decoration:none !important;    /* 「!important」が記述されているので、このスタイルは優先されて適用される */
+}
+.glovalNavigation{
+/*
+  「.」の前に要素名が無いので、要素を特定しないclassセレクタ
+*/
+    height: 70px;
+    text-align: center;
+    background-color: #8e8;
+    color: #fff;
+}
+
+
+/*========================================================================================
+  ペース換算画面
+========================================================================================*/
+pace{  /* 要素型セレクタ:要素名で指定した要素 */
+    display: flex;
+    margin: 10px 10px 10px 10px;
+    flex-direction: column;
+}
+.content{
+/*
+  「.」の前に要素名が無いので、要素を特定しないclassセレクタ
+*/
+    flex-grow: 1;    /* この要素は表示エリアのサイズが変わったときに伸長する */
+    background-color: #eee;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.localNavigation{
+/*
+  「.」の前に要素名が無いので、要素を特定しないclassセレクタ
+*/
+    /*text-align: center;*/
+    background-color: #eee;
+    color: #000;
+    width: 250px;
+    margin-right: 10px;
+}
+.footer{
+/*
+  「.」の前に要素名が無いので、要素を特定しないclassセレクタ
+*/
+    height: 50px;
+    text-align: center;
+    background-color: #2e2;
+}
+
+
+
+/***************************************************
+ 各種ボタン
+***************************************************/
+a.btn-orange{
+  padding: 0.5em;                    /* 「em」は文字の高さを1emとした単位 */
+  margin: 10px 0;
+  display: block;
+  color: #fff !important;              /* 「!important」が記述されているので、このスタイルは優先されて適用される */
+  background: #FF8300;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:16px;
+  border-radius: 3px;
+  text-align:center;
+  text-decoration:none !important;    /* 「!important」が記述されているので、このスタイルは優先されて適用される */
+}
+a.btn-orange:hover {
+/*
+  「:hover」擬似クラス:カーソルが乗っている要素
+*/
+  background: #FFCE71;
+}
+
+a.btn-green{
+  padding: 0.5em;                    /* 「em」は文字の高さを1emとした単位 */
+  margin: 10px 0;
+  display: block;
+  color: #fff !important;            /* 「!important」が記述されているので、このスタイルは優先されて適用される */
+  background: #00913D;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:16px;
+  border-radius: 3px;
+  text-align:center;
+  text-decoration:none !important;    /* 「!important」が記述されているので、このスタイルは優先されて適用される */
+}
+a.btn-green:hover {
+/*
+  「:hover」擬似クラス:カーソルが乗っている要素
+*/
+  background: #6FB83F;
+}
